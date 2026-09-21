@@ -3,8 +3,11 @@ function addRecipe() {
     let recipeName =
         document.getElementById("recipeName").value;
 
-    let imageInput =
-        document.getElementById("recipeImage");
+    let recipeIngredients =
+        document.getElementById("recipeIngredients").value;
+
+    let recipeInstructions =
+        document.getElementById("recipeInstructions").value;
 
     let recipeList =
         document.getElementById("recipeList");
@@ -12,28 +15,16 @@ function addRecipe() {
     let newRecipe =
         document.createElement("li");
 
-    if (imageInput.files.length > 0) {
-
-        let imageURL =
-            URL.createObjectURL(imageInput.files[0]);
-
-        newRecipe.innerHTML =
-        `
-        <h3>${recipeName}</h3>
-        ${imageURL}
-        `;
-
-    } else {
-
-        newRecipe.innerHTML =
-        `
-        <h3>${recipeName}</h3>
-        default-recipe.jpg
-        `;
-    }
+    newRecipe.innerHTML =
+        "<h3>" + recipeName + "</h3>" +
+        "<strong>Ingredients:</strong>" +
+        "<p>" + recipeIngredients + "</p>" +
+        "<strong>Instructions:</strong>" +
+        "<p>" + recipeInstructions + "</p>";
 
     recipeList.appendChild(newRecipe);
 
     document.getElementById("recipeName").value = "";
-    imageInput.value = "";
+    document.getElementById("recipeIngredients").value = "";
+    document.getElementById("recipeInstructions").value = "";
 }
