@@ -1,0 +1,64 @@
+style.css	
+body {
+	background-color; purple
+}
+body {
+font-family: Arial, sans-serif;
+margin: 40px;
+background: linear-gradient(
+135deg,
+#8ec5fc,
+#e0c3fc
+);
+min-height: 100vh;
+}
+h1 {
+color: black;
+}
+.form-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 500px;
+}
+input,
+textarea {
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+button {
+padding: 10px;
+background-color: navy;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+background-color: darkblue;
+}
+.recipe-card {
+background: white;
+margin-top: 20px;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0px 3px 8px rgba(0,0,0,.2);
+max-width: 600px;
+}
+#recipeList li {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 2px 5px gray;
+}
+#recipeList img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+``
