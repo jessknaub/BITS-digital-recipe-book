@@ -20,11 +20,15 @@ function addRecipe() {
         "<strong>Ingredients:</strong>" +
         "<p>" + recipeIngredients + "</p>" +
         "<strong>Instructions:</strong>" +
-        "<p>" + recipeInstructions + "</p>";
+        "<p>" + recipeInstructions + "</p>" +
+        "<button onclick='deleteRecipe(this)'>Delete Recipe</button>";
 
     recipeList.appendChild(newRecipe);
 
     document.getElementById("recipeName").value = "";
     document.getElementById("recipeIngredients").value = "";
     document.getElementById("recipeInstructions").value = "";
+}
+function deleteRecipe(button) {
+    button.parentElement.remove();
 }
