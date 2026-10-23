@@ -8,6 +8,12 @@
 <body>
 
     <h1>Digital Recipe Book</h1>
+    
+    <input
+    type="text"
+    id="searchBox"
+    placeholder="Search recipes..."
+    onkeyup="searchRecipes()">
 
     <input type="text" id="recipeName" placeholder="Enter recipe name">
 	<textarea id="recipeIngredients" placeholder="Enter ingredients"></textarea>
@@ -22,3 +28,16 @@
 
 </body>
 </html>
+
+<select id="recipeCategory">
+    <option>Breakfast</option>
+    <option>Lunch</option>
+    <option>Dinner</option>
+    <option>Dessert</option>
+    <option>Snack</option>
+</select>
+
+<div class="form-container">
+    ...
+</div>
+
