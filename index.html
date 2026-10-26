@@ -9,30 +9,37 @@
 
     <h1>Digital Recipe Book</h1>
     
-    <input type="text" id = "recipeName" placeholder = "Enter receipe name">
-    <input id="searchBox" placeholder="Search recipes..." onkeyup="searchRecipes()">
-
-    <input type="text" id="recipeName" placeholder="Enter recipe name">
-	<textarea id="recipeIngredients" placeholder="Enter ingredients"></textarea>
-	<textarea id="recipeInstructions" placeholder="Enter instructions"></textarea>
-   
-   <button onclick="addRecipe()">Add Recipe</button>
-
-    <h2>Recipes:</h2>
-    <ul id="recipeList"></ul>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
-
-<select id="recipeCategory">
+    <select id="recipeCategory">
     <option>Breakfast</option>
     <option>Lunch</option>
     <option>Dinner</option>
     <option>Dessert</option>
     <option>Snack</option>
 </select>
+
+<input type="text" id = "recipeName" placeholder = "Enter receipe name">
+
+<input id="searchBox" 
+        placeholder="Search recipes..." 
+        onkeyup="searchRecipes()">
+
+<textarea id="recipeIngredients" 
+    placeholder="Enter ingredients"></textarea>
+<textarea id="recipeInstructions" 
+    placeholder="Enter instructions"></textarea>
+   
+<button onclick="addRecipe()">Add Recipe</button>
+
+<h2>Recipes:</h2>
+
+<ul id="recipeList"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
 
 <div class="form-container">
     ...

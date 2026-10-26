@@ -12,6 +12,9 @@ function addRecipe() {
     let recipeList =
         document.getElementById("recipeList");
 
+    let newRecipe = 
+        document.createElement("li");
+    
     newRecipe.className = "recipe-card";
     
     newRecipe.innerHTML =
@@ -28,11 +31,10 @@ function addRecipe() {
     document.getElementById("recipeIngredients").value = "";
     document.getElementById("recipeInstructions").value = "";
 }
+
 function deleteRecipe(button) {
     button.parentElement.remove();
 }
-localStorage.setItem("recipes", JSON.stringify(recipes));
-JSON.parse(localStorage.getItem("recipes"));
 
 function searchRecipes() {
     let searchValue =
@@ -56,11 +58,5 @@ function searchRecipes() {
     });
 }
 
-let recipeCategory =
-    document.getElementById("recipeCategory").value;
-
-"<p><strong>Category:</strong> " +
-recipeCategory +
-"</p>"
 
 
