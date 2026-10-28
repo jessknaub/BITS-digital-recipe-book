@@ -61,10 +61,8 @@ function addRecipe() {
         "<p><strong>Category:</strong> " + recipeCategory + "</p>" +
         "<strong>Ingredients:</strong>" +
         "<ul>" + ingredientList + "</ul>"+
-        "<p>" + recipeIngredients + "</p>" +
         "<strong>Instructions:</strong>" +
-        "ol>" + instructionList + "</ol>" +
-        "<p>" + recipeInstructions + "</p>" +
+        "<ol>" + instructionList + "</ol>" +
         "<button onclick='deleteRecipe(this)'>Delete Recipe</button>";
 
     recipeList.appendChild(newRecipe);
