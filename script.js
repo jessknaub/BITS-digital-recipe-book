@@ -66,6 +66,7 @@ function addRecipe() {
         "<button onclick='deleteRecipe(this)'>Delete Recipe</button>";
 
     recipeList.appendChild(newRecipe);
+    saveRecipes();
 
     document.getElementById("recipeName").value = "";
     document.getElementById("recipeIngredients").value = "";
@@ -74,6 +75,14 @@ function addRecipe() {
 
 function deleteRecipe(button) {
     button.parentElement.remove();
+    saveRecipes();
+}
+
+function saveRecipes() {
+    localStorage.setItem(
+        "recipes",
+        document.getElementById("recipeList").innerHTML
+    );
 }
 
 function searchRecipes() {
@@ -97,6 +106,17 @@ function searchRecipes() {
         }
     });
 }
+window.onload = function () {
 
+    let savedRecipes =
+        localStorage.getItem("recipes");
+
+    if (savedRecipes) {
+
+        document.getElementById(
+            "recipeList"
+        ).innerHTML = savedRecipes;
+    }
+};
 
 
