@@ -21,6 +21,7 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     font-size: 2rem;
     margin-top: 20px;
     color: #333;
@@ -36,7 +37,7 @@ h2 {
     box-shadow:
         0 4px 15px rgba(0,0,0,.15);
 
-    max-width: 700px
+    max-width: 700px;
 
     margin: 0 auto 30px auto;
 
@@ -45,13 +46,20 @@ h2 {
     gap: 15px;
 }
 
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: -8px;
+    font-size: 14px;
+}
+
 input,
 textarea,
 select {
     font-family: Arial, sans-serif;
     font-size: 16px;
 
-    width: 100%
+    width: 100%;
 
     padding: 12px;
 
@@ -74,7 +82,7 @@ select:focus {
 
 textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
 ::placeholder {
@@ -102,6 +110,11 @@ button {
     transition: .2s;
 }
 
+button {
+    width: fit-content;
+    align-self: center;
+}
+
 button:hover {
     transform: translateY(-2px);
 
@@ -111,6 +124,11 @@ button:hover {
 
 #searchBox {
     border: 2px solid #4f63ff;
+    transition: all 0.2s ease;
+}
+
+#searchBox:focus {
+    transform: scale(1.02);
 }
 
 .recipe-card {
@@ -119,26 +137,12 @@ margin-top: 20px;
 padding: 15px;
 border-radius: 10px;
 box-shadow: 0px 3px 8px rgba(0,0,0,.2);
-max-width: 600px;
+max-width: 700px;
 
-transition: transform 0.2 ease;
+transition: transform 0.2s ease;
 }
 .recipe-card:hover {
     transform: scale(1.02);
-}
-.recipe-card ul,
-.recipe-card ol {
-    padding-left: 20px;
-}
-
-#recipeName {
-    width: 240px;
-}
-
-#recipeIngredients,
-#recipeInstructions {
-    width: 220px;
-    height: 80px;
 }
 
 #recipeList > li {
@@ -147,15 +151,23 @@ transition: transform 0.2 ease;
     margin-top: 10px;
     border-radius: 8px;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     box-shadow: 0 2px 5px gray;
 }
+
 #recipeList img {
     width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+#recipeList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
 }
 
 .recipe-card ul,

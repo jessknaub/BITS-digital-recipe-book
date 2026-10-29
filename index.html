@@ -9,31 +9,47 @@
 
     <h1>My Recipe Collection</h1>
 
-    <div class=""form-container"></div>
-    
+    <div class="form-container">
+
+    <label for="recipeCategory">Category</label>
     <select id="recipeCategory">
-    <option>Breakfast</option>
-    <option>Lunch</option>
-    <option>Dinner</option>
-    <option>Dessert</option>
-    <option>Snack</option>
-    <option>Appetizer</option>
-</select>
+        <option>Breakfast</option>
+        <option>Lunch</option>
+        <option>Dinner</option>
+        <option>Dessert</option>
+        <option>Snack</option>
+        <option>Appetizer</option>
+    </select>
 
-<input type="text" id = "recipeName" placeholder = "Enter receipe name">
+    <label for="recipeName">Recipe Name</label>
+    <input
+        type="text"
+        id="recipeName"
+        placeholder="Enter recipe name">
 
-<textarea id="recipeIngredients" 
-    placeholder="Enter ingredients"></textarea>
-<textarea id="recipeInstructions" 
-    placeholder="Enter instructions"></textarea>
-   
-<button onclick="addRecipe()">Add Recipe</button>
+    <label for="recipeIngredients">Ingredients</label>
+    <textarea
+        id="recipeIngredients"
+        placeholder="One ingredient per line"></textarea>
 
-<input id="searchBox" 
-        placeholder="Search recipes..." 
+    <label for="recipeInstructions">Instructions</label>
+    <textarea
+        id="recipeInstructions"
+        placeholder="One step per line"></textarea>
+
+    <button onclick="addRecipe()">
+        Add Recipe
+    </button>
+
+    <label for="searchBox">Search Recipes</label>
+    <input
+        id="searchBox"
+        placeholder="Search recipes..."
         onkeyup="searchRecipes()">
 
-<h2>Recipes:</h2>
+</div>
+
+<h2>Saved Recipes:</h2>
 
 <ul id="recipeList"></ul>
 
