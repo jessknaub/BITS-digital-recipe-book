@@ -81,24 +81,34 @@ function addRecipe() {
     let recipeInstructions =
         document.getElementById("recipeInstructions").value;
 
+if (
+        recipeName.trim() ==="" ||
+     recipeIngredients.trim() ==="" ||
+        recipeInstructions.trim() ==="" 
+) {
+    alert("Please complete all fields.");
+    return;
+} 
     let recipe = {
         name: recipeName, 
         ingredients: recipeIngredients, 
         instructions: recipeInstructions,
-        category: recipeCategory};
+        category: recipeCategory
+};
 
     recipes.push(recipe);
 
     localStorage.setItem(
-        'recipes",
+        "recipes",
         JSON.stringify (recipes)
     );
     
        displayRecipes();
-}
+
     document.getElementById("recipeName").value = "";
     document.getElementById("recipeIngredients").value = "";
     document.getElementById("recipeInstructions").value = "";
+    document.getElementById("recipeCategory").selectedIndex = 0;
 }
 
 function deleteRecipe(index) {
