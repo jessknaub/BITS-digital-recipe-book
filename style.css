@@ -30,7 +30,7 @@ h2 {
     background: rgba(255,255,255,.85);
     backdrop-filter: blur(10px);
 
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
 
     box-shadow:
@@ -44,24 +44,42 @@ h2 {
 }
 
 input,
-textarea, 
+textarea,
 select {
-padding: 12px;
-border-radius: 12px;
-border: 1px solid #ccc;
-font-size: 15px; 
+    font-family: Arial, sans-serif;
+    font-size: 15px;
 
-transition: all .2s ease;
+    padding: 12px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.1);
+
+    transition: all 0.2s ease;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #4a6cff;
 
     box-shadow:
-        0 0 10px rgba(74,108,255,.3);
+        0 0 0 3px rgba(79,99,255,.25),
+        0 4px 10px rgba(0,0,0,.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+::placeholder {
+    color: #888;
+    font-family: Arial, sans-serif;
 }
 
 button {
@@ -111,6 +129,16 @@ transition: transform 0.2 ease;
 .recipe-card ul,
 .recipe-card ol {
     padding-left: 20px;
+}
+
+#recipeName {
+    width: 240px;
+}
+
+#recipeIngredients,
+#recipeInstructions {
+    width: 220px;
+    height: 80px;
 }
 
 #recipeList > li {
