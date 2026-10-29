@@ -141,6 +141,12 @@ max-width: 700px;
 
 transition: transform 0.2s ease;
 }
+
+.recipe-card h3 {
+    color: #1e3cff;
+    margin-top: 0;
+}
+
 .recipe-card:hover {
     transform: scale(1.02);
 }
