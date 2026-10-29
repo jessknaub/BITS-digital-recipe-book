@@ -11,40 +11,90 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 h1 {
-color: black;
+    font-size: 3rem;
+    text-align: center;
+    color: #1b1b1b;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(255,255,255,.5);
 }
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
 .form-container {
-background: white;
-padding: 20px;
-border-radius: 15px;
-box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(10px);
 
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
+    padding: 25px;
+    border-radius: 20px;
 
-max-width: 700px;
-margin-bottom: 20px;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.15);
+
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 input,
-textarea {
-padding: 10px;
-border-radius: 5px;
+textarea, 
+select {
+padding: 12px;
+border-radius: 12px;
 border: 1px solid #ccc;
+font-size: 15px; 
+
+transition: all .2s ease;
 }
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4a6cff;
+
+    box-shadow:
+        0 0 10px rgba(74,108,255,.3);
+}
+
 button {
-padding: 10px;
-background-color: navy;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+    background: linear-gradient(
+        135deg,
+        #1e3cff,
+        #4f63ff
+    );
+
+    color: white;
+    font-weight: bold;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: .2s;
 }
+
 button:hover {
-background-color: darkblue;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.2);
 }
+
+#searchBox {
+    border: 2px solid #4f63ff;
+}
+
 .recipe-card {
 background: white;
 margin-top: 20px;
